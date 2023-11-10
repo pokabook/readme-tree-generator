@@ -74,8 +74,9 @@ func main() {
 		directory = "."
 	}
 
-	counter := new(Counter)
-	fmt.Println(directory)
+	counter := new(Counter) //📦[**TIL**](.)<br>
+	output := "📦[**" + directory + "**]" + "(" + directory + ")<br>"
+	fmt.Println(output)
 
 	tree(counter, directory, "")
 	fmt.Println(counter.output())
