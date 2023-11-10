@@ -58,10 +58,10 @@ func tree(counter *Counter, base string, prefix string) {
 
 		if index == len(names)-1 {
 			fmt.Println(prefix+"┗━", output)
-			tree(counter, subpath, prefix+"    ")
+			tree(counter, subpath, prefix+"ㅤㅤㅤ")
 		} else {
 			fmt.Println(prefix+"┣━", output)
-			tree(counter, subpath, prefix+"┃   ")
+			tree(counter, subpath, prefix+"┃ㅤㅤ")
 		}
 	}
 }
@@ -74,7 +74,7 @@ func main() {
 		directory = "."
 	}
 
-	counter := new(Counter) //📦[**TIL**](.)<br>
+	counter := new(Counter)
 	output := "📦[**" + directory + "**]" + "(" + directory + ")<br>"
 	fmt.Println(output)
 
